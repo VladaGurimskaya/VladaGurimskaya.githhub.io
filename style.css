@@ -1,0 +1,274 @@
+/* Подключаем новый шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;display=swap');
+
+/* Общие стили */
+body {
+    font-family: 'Poppins', sans-serif; /* Новый шрифт */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f7fc, #ece7f4);
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-container:hover {
+    transform: scale(1.02);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-title {
+    font-size: 1.8rem;
+    color: #444;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+/* Приветствие */
+.greeting p {
+    font-size: 1.2rem;
+    color: #5a4c8c;
+    background: #f0f0ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: inline-block;
+    animation: fadeIn 1s ease-in-out;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+/* Навыки */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    flex: 1 1 calc(30% - 20px);
+    background: linear-gradient(135deg, #f9f9f9, #f0ecf6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #dcd6f7, #f8f6fc);
+    color: #5a4c8c;
+}
+
+.skill-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+.skill-card:hover h3 {
+    color: #5a4c8c;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+.skill-card ul li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.skill-card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #b8a5d6;
+    font-size: 1rem;
+}
+
+.skill-card:hover ul li::before {
+    color: #5a4c8c;
+}
+
+/* Опыт работы */
+/* Секция опыта работы */
+.job {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    animation: slideIn 1s ease-in-out;
+    text-align: center; /* Выравниваем весь текст по центру */
+}
+
+.job:hover {
+    background: #f4f0f9;
+    transform: scale(1.01);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+.job p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+    text-align: center;
+}
+
+.job ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+    text-align: center; /* Выравниваем текст списка по центру */
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+.job ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 0; /* Убираем отступы для центрального выравнивания */
+}
+
+.job ul li::before {
+    content: "•   "; /* Маркер списка */
+    left: -15px;
+    color: #7c6799; /* Сиреневый цвет маркера */
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+/* Образование */
+.education {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    background: #f9f9f9;
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+/* Ссылки */
+a {
+    color: #7c6799;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-style: italic;
+    font-weight: 600; /* Жирный курсив */
+}
+
+a:hover {
+    color: #5a4c8c;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
